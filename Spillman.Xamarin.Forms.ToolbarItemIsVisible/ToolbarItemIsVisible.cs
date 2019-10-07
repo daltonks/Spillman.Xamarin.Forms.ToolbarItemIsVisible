@@ -24,9 +24,7 @@ namespace Spillman.Xamarin.Forms
 
         private static void OnIsVisibleChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            var toolbarItem = bindable as ToolbarItem;
-
-            if (toolbarItem == null)
+            if (!(bindable is ToolbarItem toolbarItem))
             {
                 return;
             }
